@@ -1,6 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
+  "type": "module",
   "description": "first js project",
   "main": "index.js",
   "scripts": {
@@ -14,6 +15,9 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/anatolyburtsev/frontend-project-lvl1/issues"
+  },
+  "bin": {
+      "brain-games": "bin/brain-games.js"
   },
   "homepage": "https://github.com/anatolyburtsev/frontend-project-lvl1#readme"
 }
