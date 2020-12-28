@@ -6,5 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
-      - run: make ci
-      - run: make lint
+      - name: Install
+        run: make ci
+      - name: Run linter
+        run: make lint

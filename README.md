@@ -6,3 +6,5 @@
 
 
 [Asciinema for brain-even game](https://asciinema.org/a/wyRflmC9Q0uNPFDP7PoM0KfRc)
+
+[Asciinema for brain-calc game](https://asciinema.org/a/n69BuMs5wFNiz0Kmvsqz2yWQi)
