@@ -1,5 +1,6 @@
 install: 
 	npm install
+
 ci:
 	npm ci
 
