@@ -1,5 +1,9 @@
 import readlineSync from 'readline-sync';
-import initGame from '../bin/cli.js';
+
+const readUsername = () => {
+  const name = readlineSync.question('May I have your name? ');
+  return { name };
+};
 
 const readAnswerOnQuestion = (question) => {
   console.log(`Question: ${question}`);
@@ -14,7 +18,9 @@ const getFinalMessage = (isWin, name) => {
 };
 
 const buildGame = (gameDescription, createNewTask, rounds = 3) => {
-  const { name } = initGame();
+  console.log('Welcome to the Brain Games!');
+  const { name } = readUsername();
+  console.log(`Hello, ${name}`);
 
   console.log(gameDescription);
   let isWin = true;
