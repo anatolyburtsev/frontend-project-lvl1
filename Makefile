@@ -1,7 +1,7 @@
 install: 
 	npm install
 
-ci:
+install-deps:
 	npm ci
 
 publish:
