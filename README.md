@@ -12,3 +12,5 @@
 [Asciinema for brain-gcd game](https://asciinema.org/a/rFWSTeaWHQEHWr1KsUH9POn2q)
 
 [Asciinema for brain-progression game](https://asciinema.org/a/0Tgs2sBUJrGjaADGH8RirKqyu)
+
+[Asciinema for brain-prime game](https://asciinema.org/a/9g7JGM707RWDQRHrdT9GcW13h)
