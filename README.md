@@ -5,12 +5,21 @@
 ![linter](https://github.com/anatolyburtsev/frontend-project-lvl1/workflows/linter/badge.svg)
 
 
-[Asciinema for brain-even game](https://asciinema.org/a/wyRflmC9Q0uNPFDP7PoM0KfRc)
+Asciinema for brain-even game
 
-[Asciinema for brain-calc game](https://asciinema.org/a/n69BuMs5wFNiz0Kmvsqz2yWQi)
+[![asciicast](https://asciinema.org/a/wyRflmC9Q0uNPFDP7PoM0KfRc.svg)](https://asciinema.org/a/wyRflmC9Q0uNPFDP7PoM0KfRc)
 
-[Asciinema for brain-gcd game](https://asciinema.org/a/rFWSTeaWHQEHWr1KsUH9POn2q)
+Asciinema for brain-calc game
 
-[Asciinema for brain-progression game](https://asciinema.org/a/0Tgs2sBUJrGjaADGH8RirKqyu)
+[![asciicast](https://asciinema.org/a/n69BuMs5wFNiz0Kmvsqz2yWQi.svg)](https://asciinema.org/a/n69BuMs5wFNiz0Kmvsqz2yWQi)
 
-[Asciinema for brain-prime game](https://asciinema.org/a/9g7JGM707RWDQRHrdT9GcW13h)
+Asciinema for brain-gcd game
+
+[![asciicast](https://asciinema.org/a/rFWSTeaWHQEHWr1KsUH9POn2q.svg)](https://asciinema.org/a/rFWSTeaWHQEHWr1KsUH9POn2q)
+
+Asciinema for brain-progression game
+
+[![asciicast](https://asciinema.org/a/0Tgs2sBUJrGjaADGH8RirKqyu.svg)](https://asciinema.org/a/0Tgs2sBUJrGjaADGH8RirKqyu)
+
+Asciinema for brain-prime game
+[![asciicast](https://asciinema.org/a/9g7JGM707RWDQRHrdT9GcW13h.svg)](https://asciinema.org/a/9g7JGM707RWDQRHrdT9GcW13h)
