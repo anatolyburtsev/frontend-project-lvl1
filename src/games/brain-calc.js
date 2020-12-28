@@ -1,7 +1,11 @@
 import buildGame from '../brain-game-engine.js';
 import generateRandomNumber from '../helpers.js';
 
-const operations = { '+': (a, b) => a + b, '-': (a, b) => a - b, '*': (a, b) => a * b };
+const operations = {
+  '+': (a, b) => a + b,
+  '-': (a, b) => a - b,
+  '*': (a, b) => a * b,
+};
 
 const startGame = () => {
   const description = 'What is the result of the expression?';

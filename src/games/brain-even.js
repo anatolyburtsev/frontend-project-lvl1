@@ -1,8 +1,6 @@
 import buildGame from '../brain-game-engine.js';
 import generateRandomNumber from '../helpers.js';
 
-const NUMBER_CORRECT_ANSWERS_TO_WIN = 3;
-
 const isEven = (n) => n % 2 === 0;
 
 const startGame = () => {
@@ -14,7 +12,7 @@ const startGame = () => {
       answer: isEven(number) ? 'yes' : 'no',
     };
   };
-  return buildGame(description, createNewTask, NUMBER_CORRECT_ANSWERS_TO_WIN);
+  return buildGame(description, createNewTask);
 };
 
 export default startGame;
