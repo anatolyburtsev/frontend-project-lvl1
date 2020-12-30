@@ -11,7 +11,7 @@ const startGame = () => {
     for (let i = 0; i < count; i += 1) {
       values.push(initialValue + step * i);
     }
-    const missingValueIdx = generateRandomNumber(0, values.length);
+    const missingValueIdx = generateRandomNumber(0, values.length - 1);
     const missingValue = values[missingValueIdx];
     values[missingValueIdx] = '..';
     return {
