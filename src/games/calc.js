@@ -1,5 +1,5 @@
 import buildGame from '../brain-game-engine.js';
-import generateRandomNumber from '../helpers.js';
+import generateRandomNumber, { pickRandom } from '../helpers.js';
 
 const operations = {
   '+': (a, b) => a + b,
@@ -12,11 +12,10 @@ const startGame = () => {
   const createNewTask = () => {
     const number1 = generateRandomNumber();
     const number2 = generateRandomNumber();
-    const opNumber = generateRandomNumber(0, Object.keys(operations).length - 1);
-    const operation = Object.keys(operations)[opNumber];
-    const answer = operations[operation](number1, number2);
+    const opSign = pickRandom(Object.keys(operations)).value;
+    const answer = operations[opSign](number1, number2);
     return {
-      question: `${number1} ${operation} ${number2}`,
+      question: `${number1} ${opSign} ${number2}`,
       answer: answer.toString(),
     };
   };

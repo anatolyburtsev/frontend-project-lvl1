@@ -1,5 +1,5 @@
 import buildGame from '../brain-game-engine.js';
-import generateRandomNumber from '../helpers.js';
+import generateRandomNumber, { pickRandom } from '../helpers.js';
 
 const startGame = () => {
   const description = 'What number is missing in the progression?';
@@ -11,8 +11,7 @@ const startGame = () => {
     for (let i = 0; i < count; i += 1) {
       values.push(initialValue + step * i);
     }
-    const missingValueIdx = generateRandomNumber(0, values.length - 1);
-    const missingValue = values[missingValueIdx];
+    const { index: missingValueIdx, value: missingValue } = pickRandom(values);
     values[missingValueIdx] = '..';
     return {
       question: values.join(' '),

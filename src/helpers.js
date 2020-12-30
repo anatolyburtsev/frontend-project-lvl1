@@ -5,4 +5,10 @@ const generateRandomNumber = (minNumber = 2, maxNumber = 20) => {
   return Math.floor(Math.random() * (max - min) + min);
 };
 
+export const pickRandom = (arr) => {
+  const index = generateRandomNumber(0, arr.length - 1);
+  const value = arr[index];
+  return { index, value };
+};
+
 export default generateRandomNumber;
