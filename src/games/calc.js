@@ -12,7 +12,7 @@ const startGame = () => {
   const createNewTask = () => {
     const number1 = generateRandomNumber();
     const number2 = generateRandomNumber();
-    const opNumber = generateRandomNumber(0, Object.keys(operations).length);
+    const opNumber = generateRandomNumber(0, Object.keys(operations).length - 1);
     const operation = Object.keys(operations)[opNumber];
     const answer = operations[operation](number1, number2);
     return {
