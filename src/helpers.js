@@ -1,5 +1,4 @@
-// minNumber - inclusive, maxNumber - exclusive
-const generateRandomNumber = (minNumber = 2, maxNumber = 20) => {
+const generateRandomNumber = (minNumber, maxNumber) => {
   const min = Math.ceil(minNumber);
   const max = Math.floor(maxNumber) + 1;
   return Math.floor(Math.random() * (max - min) + min);

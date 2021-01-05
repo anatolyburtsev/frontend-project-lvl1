@@ -1,9 +1,10 @@
-import buildGame from '../brain-game-engine.js';
-import generateRandomNumber from '../helpers.js';
+import buildGame from "../brain-game-engine.js";
+import generateRandomNumber from "../helpers.js";
 
 const isPrime = (number) => {
   if (number < 2) return false;
-  for (let i = 2; i < Math.floor(Math.sqrt(number)) + 1; i += 1) {
+  const maxPossibleDividerValue = Math.floor(Math.sqrt(number)) + 1;
+  for (let i = 2; i < maxPossibleDividerValue; i += 1) {
     if (number % i === 0) {
       return false;
     }
@@ -12,10 +13,11 @@ const isPrime = (number) => {
 };
 
 const startGame = () => {
-  const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+  const description =
+    'Answer "yes" if given number is prime. Otherwise answer "no".';
   const createNewTask = () => {
     const number = generateRandomNumber(2, 100);
-    const answer = isPrime(number) ? 'yes' : 'no';
+    const answer = isPrime(number) ? "yes" : "no";
     return {
       question: `${number}`,
       answer,

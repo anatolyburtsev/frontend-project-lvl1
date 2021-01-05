@@ -1,5 +1,5 @@
-import buildGame from '../brain-game-engine.js';
-import generateRandomNumber from '../helpers.js';
+import buildGame from "../brain-game-engine.js";
+import generateRandomNumber from "../helpers.js";
 
 const calculateGcd = (x, y) => {
   let [a, b] = [x, y];
@@ -14,10 +14,12 @@ const calculateGcd = (x, y) => {
 };
 
 const startGame = () => {
-  const description = 'Find the greatest common divisor of given numbers.';
+  const description = "Find the greatest common divisor of given numbers.";
   const createNewTask = () => {
-    const number1 = generateRandomNumber();
-    const number2 = generateRandomNumber();
+    const minValue = 3;
+    const maxValue = 100;
+    const number1 = generateRandomNumber(minValue, maxValue);
+    const number2 = generateRandomNumber(minValue, maxValue);
     const gcd = calculateGcd(number1, number2);
     return {
       question: `${number1} ${number2}`,
