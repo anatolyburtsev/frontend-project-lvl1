@@ -26,7 +26,6 @@
   },
   "homepage": "https://github.com/anatolyburtsev/frontend-project-lvl1#readme",
   "dependencies": {
-    "hexlet": "^1.0.4",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
