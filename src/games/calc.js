@@ -1,14 +1,14 @@
-import buildGame from '../brain-game-engine.js';
-import generateRandomNumber, { pickRandom } from '../helpers.js';
+import buildGame from "../brain-game-engine.js";
+import { generateRandomNumber, pickRandom } from "../utils.js";
 
 const operations = {
-  '+': (a, b) => a + b,
-  '-': (a, b) => a - b,
-  '*': (a, b) => a * b,
+  "+": (a, b) => a + b,
+  "-": (a, b) => a - b,
+  "*": (a, b) => a * b,
 };
 
 const startGame = () => {
-  const description = 'What is the result of the expression?';
+  const description = "What is the result of the expression?";
   const createNewTask = () => {
     const minValue = 2;
     const maxValue = 20;
