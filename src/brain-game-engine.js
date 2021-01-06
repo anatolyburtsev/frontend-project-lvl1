@@ -29,7 +29,9 @@ const buildGame = (gameDescription, createNewTask, rounds = 3) => {
     const answer = readAnswerOnQuestion(question);
 
     if (answer !== expectedAnswer) {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'.`);
+      console.log(
+        `'${answer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'.`,
+      );
       isWin = false;
       break;
     } else {

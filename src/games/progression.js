@@ -1,8 +1,8 @@
-import buildGame from "../brain-game-engine.js";
-import { generateRandomNumber, pickRandom } from "../utils.js";
+import buildGame from '../brain-game-engine.js';
+import { generateRandomNumber, pickRandom } from '../utils.js';
 
 const startGame = () => {
-  const description = "What number is missing in the progression?";
+  const description = 'What number is missing in the progression?';
   const createNewTask = () => {
     const initialValue = generateRandomNumber(3, 20);
     const step = generateRandomNumber(1, 5);
@@ -12,9 +12,9 @@ const startGame = () => {
       values.push(initialValue + step * i);
     }
     const { index: indexToDrop, value: valueToDrop } = pickRandom(values);
-    values[indexToDrop] = "..";
+    values[indexToDrop] = '..';
     return {
-      question: values.join(" "),
+      question: values.join(' '),
       answer: valueToDrop.toString(),
     };
   };
