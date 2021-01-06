@@ -18,6 +18,12 @@ $ make install
 $ make lint
 ```
 
+### Install the game
+
+```sh
+$ make link
+```
+
 ## How to use
 
 ### Brain Game Even
