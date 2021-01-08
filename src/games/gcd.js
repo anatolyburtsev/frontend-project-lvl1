@@ -1,5 +1,5 @@
 import buildGame from '../engine.js';
-import { generateRandomNumber } from '../utils.js';
+import utils from '../utils.js';
 
 const calculateGcd = (x, y) => {
   let [a, b] = [x, y];
@@ -18,8 +18,8 @@ const startGame = () => {
   const createNewTask = () => {
     const minValue = 3;
     const maxValue = 100;
-    const number1 = generateRandomNumber(minValue, maxValue);
-    const number2 = generateRandomNumber(minValue, maxValue);
+    const number1 = utils.generateRandomNumber(minValue, maxValue);
+    const number2 = utils.generateRandomNumber(minValue, maxValue);
     const gcd = calculateGcd(number1, number2);
     return {
       question: `${number1} ${number2}`,

@@ -6,4 +6,4 @@ const pickRandomItem = (arr) => {
   return { index, value };
 };
 
-export { generateRandomNumber, pickRandomItem };
+export default { generateRandomNumber, pickRandomItem };

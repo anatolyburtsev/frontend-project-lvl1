@@ -6,7 +6,6 @@ const buildGame = (gameDescription, createNewTask, rounds = 3) => {
   console.log(`Hello, ${name}`);
 
   console.log(gameDescription);
-  let isWin = true;
   for (let attempt = 0; attempt < rounds; attempt += 1) {
     const { question, answer: correctAnswer } = createNewTask();
     console.log(`Question: ${question}`);
@@ -16,16 +15,12 @@ const buildGame = (gameDescription, createNewTask, rounds = 3) => {
       console.log(
         `'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
       );
-      isWin = false;
-      break;
-    } else {
-      console.log('Correct');
+      console.log(`Let's try again, ${name}!`);
+      return;
     }
+    console.log('Correct');
   }
-  if (isWin) {
-    console.log(`Congratulations, ${name}!`);
-  }
-  console.log(`Let's try again, ${name}!`);
+  console.log(`Congratulations, ${name}!`);
 };
 
 export default buildGame;

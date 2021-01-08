@@ -1,5 +1,5 @@
 import buildGame from '../engine.js';
-import { generateRandomNumber, pickRandomItem } from '../utils.js';
+import utils from '../utils.js';
 
 const operations = {
   '+': (a, b) => a + b,
@@ -12,9 +12,9 @@ const startGame = () => {
   const createNewTask = () => {
     const minValue = 2;
     const maxValue = 20;
-    const number1 = generateRandomNumber(minValue, maxValue);
-    const number2 = generateRandomNumber(minValue, maxValue);
-    const opSign = pickRandomItem(Object.keys(operations)).value;
+    const number1 = utils.generateRandomNumber(minValue, maxValue);
+    const number2 = utils.generateRandomNumber(minValue, maxValue);
+    const opSign = utils.pickRandomItem(Object.keys(operations)).value;
     const answer = operations[opSign](number1, number2);
     return {
       question: `${number1} ${opSign} ${number2}`,

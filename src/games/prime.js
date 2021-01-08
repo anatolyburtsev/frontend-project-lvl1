@@ -1,5 +1,5 @@
 import buildGame from '../engine.js';
-import { generateRandomNumber } from '../utils.js';
+import utils from '../utils.js';
 
 const isPrime = (number) => {
   if (number < 2) return false;
@@ -15,7 +15,7 @@ const isPrime = (number) => {
 const startGame = () => {
   const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   const createNewTask = () => {
-    const number = generateRandomNumber(2, 100);
+    const number = utils.generateRandomNumber(2, 100);
     const answer = isPrime(number) ? 'yes' : 'no';
     return {
       question: `${number}`,
