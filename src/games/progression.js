@@ -1,5 +1,5 @@
 import buildGame from '../engine.js';
-import { generateRandomNumber, pickRandom } from '../utils.js';
+import { generateRandomNumber, pickRandomItem } from '../utils.js';
 
 const startGame = () => {
   const description = 'What number is missing in the progression?';
@@ -11,7 +11,7 @@ const startGame = () => {
     for (let i = 0; i < count; i += 1) {
       values.push(initialValue + step * i);
     }
-    const { index: indexToDrop, value: valueToDrop } = pickRandom(values);
+    const { index: indexToDrop, value: valueToDrop } = pickRandomItem(values);
     values[indexToDrop] = '..';
     return {
       question: values.join(' '),
