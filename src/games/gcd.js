@@ -1,16 +1,9 @@
 import buildGame from '../engine.js';
 import utils from '../utils.js';
 
-const calculateGcd = (x, y) => {
-  let [a, b] = [x, y];
-  while (a !== b) {
-    if (a > b) {
-      [a, b] = [b, a - b];
-    } else {
-      [a, b] = [b - a, a];
-    }
-  }
-  return a;
+const calculateGcd = (a, b) => {
+  if (a === 0) return b;
+  return calculateGcd(b % a, a);
 };
 
 const startGame = () => {
