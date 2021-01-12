@@ -14,7 +14,9 @@ const generateRound = () => {
   const maxValue = 20;
   const number1 = utils.generateRandomNumber(minValue, maxValue);
   const number2 = utils.generateRandomNumber(minValue, maxValue);
-  const operationSign = utils.pickRandomItem(Object.keys(operations)).value;
+  const { value: operationSign } = utils.pickRandomItem(
+    Object.keys(operations),
+  );
   const answer = operations[operationSign](number1, number2);
   return {
     question: `${number1} ${operationSign} ${number2}`,
