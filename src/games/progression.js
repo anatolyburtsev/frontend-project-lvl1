@@ -12,9 +12,22 @@ const generateProgression = (initialValue, step, progressionLength) => {
 };
 
 const generateRound = () => {
-  const initialValue = utils.generateRandomNumber(3, 20);
-  const step = utils.generateRandomNumber(1, 5);
-  const progressionLength = utils.generateRandomNumber(7, 12);
+  const minInitialValue = 3;
+  const maxInitialValue = 20;
+  const minStep = 1;
+  const maxStep = 5;
+  const minProgressionLength = 7;
+  const maxProgressionLength = 12;
+
+  const initialValue = utils.generateRandomNumber(
+    minInitialValue,
+    maxInitialValue,
+  );
+  const step = utils.generateRandomNumber(minStep, maxStep);
+  const progressionLength = utils.generateRandomNumber(
+    minProgressionLength,
+    maxProgressionLength,
+  );
   const values = generateProgression(initialValue, step, progressionLength);
   const { index: indexToDrop, value: valueToDrop } = utils.pickRandomItem(
     values,
