@@ -1,4 +1,4 @@
-import buildGame from '../engine.js';
+import build from '../engine.js';
 import utils from '../utils.js';
 
 const calculateGcd = (a, b) => {
@@ -19,7 +19,7 @@ const startGame = () => {
       answer: gcd.toString(),
     };
   };
-  return buildGame(description, createNewTask);
+  return build(description, createNewTask);
 };
 
 export default startGame;

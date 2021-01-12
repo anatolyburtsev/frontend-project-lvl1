@@ -1,4 +1,4 @@
-import buildGame from '../engine.js';
+import build from '../engine.js';
 import utils from '../utils.js';
 
 const isEven = (n) => n % 2 === 0;
@@ -12,7 +12,7 @@ const startGame = () => {
       answer: isEven(number) ? 'yes' : 'no',
     };
   };
-  return buildGame(description, createNewTask);
+  return build(description, createNewTask);
 };
 
 export default startGame;

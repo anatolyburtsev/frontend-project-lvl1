@@ -1,35 +1,27 @@
 import readlineSync from 'readline-sync';
 
-const playRound = (task) => {
-  const { question, answer: correctAnswer } = task;
-  console.log(`Question: ${question}`);
-  const answer = readlineSync.question('Your answer: ');
-
-  if (answer !== correctAnswer) {
-    console.log(
-      `'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
-    );
-    return false;
-  }
-  console.log('Correct');
-  return true;
-};
-
-const buildGame = (gameDescription, createNewTask, rounds = 3) => {
+const build = (description, generateRound, roundCount = 3) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}`);
 
-  console.log(gameDescription);
-  for (let attempt = 0; attempt < rounds; attempt += 1) {
-    const isSuccessfullRound = playRound(createNewTask());
+  console.log(description);
+  for (let attempt = 0; attempt < roundCount; attempt += 1) {
+    const { question, answer: correctAnswer } = generateRound();
+    console.log(`Question: ${question}`);
+    const answer = readlineSync.question('Your answer: ');
 
-    if (!isSuccessfullRound) {
+    if (answer !== correctAnswer) {
+      console.log(
+        `'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`
+      );
       console.log(`Let's try again, ${name}!`);
-      return;
+      return false;
     }
+    console.log('Correct');
   }
   console.log(`Congratulations, ${name}!`);
+  return true;
 };
 
-export default buildGame;
+export default build;
