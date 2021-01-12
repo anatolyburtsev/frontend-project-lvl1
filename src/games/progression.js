@@ -3,20 +3,26 @@ import utils from '../utils.js';
 
 const description = 'What number is missing in the progression?';
 
+const generateProgression = (initialValue, step, progressionLength) => {
+  const values = [];
+  for (let i = 0; i < progressionLength; i += 1) {
+    values.push(initialValue + step * i);
+  }
+  return values;
+};
+
 const generateRound = () => {
   const initialValue = utils.generateRandomNumber(3, 20);
   const step = utils.generateRandomNumber(1, 5);
-  const count = utils.generateRandomNumber(7, 12);
-  const values = [];
-  for (let i = 0; i < count; i += 1) {
-    values.push(initialValue + step * i);
-  }
+  const progressionLength = utils.generateRandomNumber(7, 12);
+  const values = generateProgression(initialValue, step, progressionLength);
   const { index: indexToDrop, value: valueToDrop } = utils.pickRandomItem(
     values,
   );
-  values[indexToDrop] = '..';
   return {
-    question: values.join(' '),
+    question: values
+      .map((val, idx) => (idx === indexToDrop ? '..' : val))
+      .join(' '),
     answer: valueToDrop.toString(),
   };
 };
