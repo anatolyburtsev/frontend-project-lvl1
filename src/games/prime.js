@@ -1,7 +1,8 @@
-import buildGame from '../engine.js';
+import build from '../engine.js';
 import utils from '../utils.js';
 
-const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const description =
+  'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (number) => {
   if (number < 2) return false;
@@ -23,6 +24,6 @@ const generateRound = () => {
   };
 };
 
-const start = () => buildGame(description, generateRound);
+const start = () => build(description, generateRound);
 
 export default start;

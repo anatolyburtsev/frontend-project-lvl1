@@ -1,4 +1,4 @@
-import buildGame from '../engine.js';
+import build from '../engine.js';
 import utils from '../utils.js';
 
 const description = 'What number is missing in the progression?';
@@ -12,7 +12,7 @@ const generateRound = () => {
     values.push(initialValue + step * i);
   }
   const { index: indexToDrop, value: valueToDrop } = utils.pickRandomItem(
-    values,
+    values
   );
   values[indexToDrop] = '..';
   return {
@@ -21,6 +21,6 @@ const generateRound = () => {
   };
 };
 
-const start = () => buildGame(description, generateRound);
+const start = () => build(description, generateRound);
 
 export default start;

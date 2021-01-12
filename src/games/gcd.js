@@ -1,4 +1,4 @@
-import buildGame from '../engine.js';
+import build from '../engine.js';
 import utils from '../utils.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
@@ -20,6 +20,6 @@ const generateRound = () => {
   };
 };
 
-const start = () => buildGame(description, generateRound);
+const start = () => build(description, generateRound);
 
 export default start;
