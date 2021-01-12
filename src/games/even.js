@@ -13,6 +13,6 @@ const generateRound = () => {
   };
 };
 
-const startGame = () => build(description, generateRound);
+const start = () => build(description, generateRound);
 
-export default startGame;
+export default start;

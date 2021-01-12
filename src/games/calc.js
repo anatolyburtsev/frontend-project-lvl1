@@ -22,6 +22,6 @@ const generateRound = () => {
   };
 };
 
-const startGame = () => buildGame(description, generateRound);
+const start = () => buildGame(description, generateRound);
 
-export default startGame;
+export default start;
