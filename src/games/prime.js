@@ -1,6 +1,8 @@
 import buildGame from '../engine.js';
 import utils from '../utils.js';
 
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
 const isPrime = (number) => {
   if (number < 2) return false;
   const maxPossibleDividerValue = Math.floor(Math.sqrt(number)) + 1;
@@ -12,17 +14,15 @@ const isPrime = (number) => {
   return true;
 };
 
-const startGame = () => {
-  const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  const createNewTask = () => {
-    const number = utils.generateRandomNumber(2, 100);
-    const answer = isPrime(number) ? 'yes' : 'no';
-    return {
-      question: `${number}`,
-      answer,
-    };
+const generateRound = () => {
+  const number = utils.generateRandomNumber(2, 100);
+  const answer = isPrime(number) ? 'yes' : 'no';
+  return {
+    question: `${number}`,
+    answer,
   };
-  return buildGame(description, createNewTask);
 };
+
+const startGame = () => buildGame(description, generateRound);
 
 export default startGame;
