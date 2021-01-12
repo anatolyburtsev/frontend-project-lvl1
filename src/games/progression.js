@@ -12,7 +12,7 @@ const generateRound = () => {
     values.push(initialValue + step * i);
   }
   const { index: indexToDrop, value: valueToDrop } = utils.pickRandomItem(
-    values
+    values,
   );
   values[indexToDrop] = '..';
   return {
